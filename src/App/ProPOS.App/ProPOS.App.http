@@ -1,0 +1,6 @@
+@ProPOS.App_HostAddress = http://localhost:5067
+
+GET {{ProPOS.App_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
