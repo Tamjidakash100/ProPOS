@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProPOS.Infraustructure
+namespace ProPOS.Infraustructure.Persistence
 {
-    internal class Class1
+    internal class Extensions
     {
     }
 }
