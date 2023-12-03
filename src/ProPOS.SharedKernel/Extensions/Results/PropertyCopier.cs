@@ -1,6 +1,6 @@
 ﻿namespace ProPOS.SharedKernel.Extensions.Results;
 
-internal static class PropertyCopier
+public static class PropertyCopier
 {
     public static void CopyPropertiesTo<T, TU>(this T source, TU dest)
     {
