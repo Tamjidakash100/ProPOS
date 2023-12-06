@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using ProPOS.App.Controllers.Base;
+using ProPOS.Application.Features.Country.Query;
+using ProPOS.Application.Models;
 
-namespace ProPOS.App.Controllers
+namespace ProPOS.App.Controllers;
+
+public class CountryController : ApiControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CountryController : ControllerBase
+    [HttpGet]
+    public async Task<ActionResult<CountyVm>> GetListAsync(int pageSize = 1, int pageNumber = 10, string searchText = null!)
     {
+        return await HandelQueryAsync(new GetCountryListAsync(pageSize, pageNumber, searchText));
     }
 }

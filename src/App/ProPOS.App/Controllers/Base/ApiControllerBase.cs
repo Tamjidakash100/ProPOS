@@ -24,7 +24,6 @@ public class ApiControllerBase : ControllerBase
             _ => new OkObjectResult(result.Result)
         };
     }
-
     protected async Task<ActionResult> HandelQueryAsync<T>(IRequest<QueryResult<T>> query)
     {
         var result = await Mediator.Send(query);
